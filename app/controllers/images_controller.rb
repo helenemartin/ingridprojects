@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  def self.random_five
+  def index
     Image.first(5)   
   end
 end
