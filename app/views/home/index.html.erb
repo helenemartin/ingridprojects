@@ -1,4 +1,4 @@
 <% @images.each do |image| %>
-  <p><%= image_tag(image.filename)%></p>
+  <img><%= link_to image_tag(image.filename), "/images/#{image.id}" %></img>
 
 <% end %>

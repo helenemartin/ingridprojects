@@ -8,6 +8,12 @@
 </head>
 <body>
 
+  <h1><%=link_to "Ingrid", root_path %></h1>
+      <ul>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+      </ul>
+
 <%= yield %>
 
 </body>

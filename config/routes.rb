@@ -6,6 +6,7 @@ Ingrid::Application.routes.draw do
   root 'home#index'
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
+  get 'images/:id' => 'images#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
