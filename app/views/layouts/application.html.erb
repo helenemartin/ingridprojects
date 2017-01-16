@@ -8,15 +8,21 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway" rel="stylesheet">
 </head>
 <body>
-    <nav>
-      <ul>
-        <li><h1><%=link_to "Ingrid", root_path %></h1></li>
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
-      </ul>
-    </nav>
-
+  <div class="cbp-af-header">
+    <div class="cbp-af-inner">
+      <h1><%=link_to "Ingrid", root_path %></h1>
+      <nav>
+        <%= link_to "About", about_path %>
+        <%= link_to "Contact", contact_path %>
+      </nav>
+    </div>
+  </div>
+     
 <%= yield %>
+
 
 </body>
 </html>
+
+
+
