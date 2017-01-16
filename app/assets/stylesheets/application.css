@@ -11,9 +11,40 @@
  *= require_self
  *= require_tree .
  */
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway');
+
+
+
+  
+h1 a {
+  color:black;
+  font-size: 100px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+
+li {
+  list-style-type:none;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  float:left;
+}
+
+
+
+li a {
+  text-decoration: none;
+}
+
+li :hover {
+  color: pink;
+}
+
 img {
   width: 25%;
-  padding: 0 2px 2px 2px;
+  padding: 10px 20px 2px 2px;
   float: right;
   border-radius: 4px;
 }
