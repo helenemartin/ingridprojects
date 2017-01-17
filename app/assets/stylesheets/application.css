@@ -118,6 +118,12 @@ p {
 
 /* Example Media Queries */
 @media screen and (max-width: 55em) {
+
+  img {
+    max-width:80%;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
   
   .cbp-af-header .cbp-af-inner {
     width: 100%;
