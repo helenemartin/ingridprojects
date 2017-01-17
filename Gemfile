@@ -28,6 +28,7 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem "koala", "~> 2.2"
 
 group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
