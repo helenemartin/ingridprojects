@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway" rel="stylesheet">
-</head>
+
 <body>
   <div class="container">
   <div class="cbp-af-header">
@@ -15,12 +15,13 @@
       <nav>
         <%= link_to "About", about_path %>
         <%= link_to "Contact", contact_path %>
+        <a href="https://www.facebook.com/ingridprojects/?fref=ts" target="_blank"><i class="fa fa-facebook-square">f</i></a></li>
       </nav>
     </div>
   </div>
   
     <%= yield %>
- 
+  </div>
 </body>
 </html>
 

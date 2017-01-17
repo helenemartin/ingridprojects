@@ -8,13 +8,17 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+
+
  */
+
 @import url('https://fonts.googleapis.com/css?family=Poppins|Raleway');
 
-@import 'bootstrap';
 
+.container {
+  width: 1500px;
+  margin: 0 auto;
+}
   
 h1 a {
   color:black;
@@ -34,9 +38,6 @@ p {
   font-family: 'Raleway', sans-serif;
 }
 
-.container {
-  margin-top: 150px;
-}
 
 .cbp-af-header {
   position: fixed;
@@ -166,4 +167,37 @@ p {
   .cbp-af-header.cbp-af-header-shrink nav a {
     line-height: 1;
   }
+}
+/* line 4, /Users/helenemartin/Sites/ingrid/app/assets/stylesheets/images.css.scss */
+img {
+  width: 25%;
+  padding: 10px 20px 2px 2px;
+  float: left;
+  border-radius: 4px;
+}
+
+/* line 11, /Users/helenemartin/Sites/ingrid/app/assets/stylesheets/images.css.scss */
+.show img {
+  width: 40%;
+  float: right;
+  margin-top: 7%;
+  margin-right: 30%;
+}
+/* line 6, /Users/helenemartin/Sites/ingrid/app/assets/stylesheets/static_pages.css.scss */
+iframe {
+  float: left;
+  width: 50%;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+
+/* line 13, /Users/helenemartin/Sites/ingrid/app/assets/stylesheets/static_pages.css.scss */
+p {
+  width: 50%;
+  height: 80%;
+  padding-top: 150px;
+  padding-left: 200px;
+  line-height: 2em;
+  display: block;
+  position: absolute;
 }
