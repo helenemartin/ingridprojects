@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
 iframe {
   float:left;
   width: 50%;
@@ -15,8 +16,11 @@ p {
   height: 80%;
   padding-top: 150px;
   padding-left: 200px;
-  line-height: 2em;
+  line-height: 1.6em;
   display: block;
   position: absolute;
 }
 
+br {
+  line-height: 1.2em;
+}

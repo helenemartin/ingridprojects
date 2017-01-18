@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Raleway" rel="stylesheet">
 
 <body>
   <div class="container">
@@ -14,6 +14,7 @@
       <h1><%=link_to "Ingrid", root_path %></h1>
       <nav>
         <%= link_to "About", about_path %>
+        <%= link_to "Events", events_path %>
         <%= link_to "Contact", contact_path %>
         <a href="https://www.facebook.com/ingridprojects/?fref=ts" target="_blank"><i class="fa fa-facebook-square">f</i></a></li>
       </nav>

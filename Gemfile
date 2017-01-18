@@ -28,8 +28,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem "koala", "~> 2.2"
-
+gem 'koala', "~> 2.2"
+gem 'better_errors'
 group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'rspec-rails', '~> 3.5'
@@ -57,3 +57,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'binding_of_caller'
+
