@@ -18,7 +18,8 @@
 h1 a {
   color:black;
   font-size: 100px;
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: 'Abril Fatface', cursive;
+  text-transform: capitalize;
   text-decoration: none;
 }
 
@@ -28,23 +29,42 @@ a {
 }
 
 p {
+  width:50%;
   font-size: 15px;
+  text-align:justify;
+  margin:0 auto;
+  padding-top:180px;
   color: gray;
   font-family: 'Raleway', sans-serif;
 }
 
-.container {
-  margin-top: 180px;
+p span {
+  display: block;
+  line-height: 2em;
 }
+
+
+
+.container {
+  margin-top: 200px;
+}
+.container .contact {
+  margin:320px 50px 20px 320px;
+
+}
+.container .contact p {
+  size: 11px;
+}
+
 
 .cbp-af-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent;
+  background: #ffffff;
   z-index: 10000;
-  height: 230px;
+  height: 200px;
   overflow: hidden;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
