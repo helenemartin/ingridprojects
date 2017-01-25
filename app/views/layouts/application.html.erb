@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
-
+</head>
 <body>
   <div class="container">
   <div class="cbp-af-header">
@@ -23,7 +23,8 @@
   
     <%= yield %>
   </div>
-  
+  <script src="js/classie.js"></script>
+  <script src="js/cbpAnimatedHeader.min.js"></script>
 </body>
 </html>
 

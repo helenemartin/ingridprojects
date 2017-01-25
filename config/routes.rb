@@ -8,6 +8,9 @@ Ingrid::Application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'images/:id' => 'images#show'
   get 'events' => 'static_pages#events'
+  get 'start' => 'static_pages#start'
+  get 'callback' => 'static_pages#callback'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
