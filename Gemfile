@@ -30,6 +30,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'koala', "~> 2.2"
 gem 'better_errors'
+gem 'httparty'
 group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'rspec-rails', '~> 3.5'
