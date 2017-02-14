@@ -1,17 +1,41 @@
-<%= @token %>
-<% @events.each do |event| %>
-  
-  <% e = OpenStruct.new(event) %>
 
-  <!-- <pre><%= e %></pre> -->
-  <p>Upcoming Events</p>
-  <h1><%= e.name %></h1>
-  <p><%= e.location %></p>
-  <p><%= e.start_time.to_time.to_formatted_s(:short) %></p>
-  <p><%= e.rsvp_status %></p>
-  <%= link_to "facebook", "https://facebook.com/#{e.id}"%>
-  </br>
-  <p>Past Events</p>
+
+
+<% @events.each do |event| %>
+
+  <% event.last.each do |e| %>
+    <% next if e.first == "cursors" %>
+    <h1><%= event_id = e.first["id"] %></h1>
+
+    <% @event_covers.each do |ec| %>
+      <% next if ec.first == "paging" %>
+      
+      <% ec.last.each do |cover| %>
+        
+      <p>
+        <%= cover['id'] == event_id %>
+        <strong>
+        COVER_ID: <%= cover['id']%> = 
+        EVENT_iD: <%= event_id %> 
+        </strong>
+      </p>
+        <% next if cover['id'] != event_id %>
+        <img src="<%= cover['cover']['source'] %>" >
+      <% end %>
+
+    <% end %> 
+
+
+    <!-- <pre><%= e %></pre> -->
+    <p>Upcoming Events</p>
+    <h1><%= e["name"] %></h1>
+    <p><%= e["location"] %></p>
+    <p><%= e["rsvp_status"] %></p>
+    <%= link_to "facebook", "https://facebook.com/#{e["id"]}"%>
+    </br>
+    <p>Past Events</p>
+
+<% end %>
 
 <% end %>
 
