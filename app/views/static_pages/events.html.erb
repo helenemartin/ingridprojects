@@ -2,40 +2,13 @@
 
 
 <% @events.each do |event| %>
+  
 
-  <% event.last.each do |e| %>
-    <% next if e.first == "cursors" %>
-    <h1><%= event_id = e.first["id"] %></h1>
+  <h1><%= event["name"] %></h1>
+  <%= image_tag event["cover"]["source"] %>
+  <p><%= event["place"]["name"] %></p>
+  <p><%= event["description"] %></p>
 
-    <% @event_covers.each do |ec| %>
-      <% next if ec.first == "paging" %>
-      
-      <% ec.last.each do |cover| %>
-        
-      <p>
-        <%= cover['id'] == event_id %>
-        <strong>
-        COVER_ID: <%= cover['id']%> = 
-        EVENT_iD: <%= event_id %> 
-        </strong>
-      </p>
-        <% next if cover['id'] != event_id %>
-        <img src="<%= cover['cover']['source'] %>" >
-      <% end %>
-
-    <% end %> 
-
-
-    <!-- <pre><%= e %></pre> -->
-    <p>Upcoming Events</p>
-    <h1><%= e["name"] %></h1>
-    <p><%= e["location"] %></p>
-    <p><%= e["rsvp_status"] %></p>
-    <%= link_to "facebook", "https://facebook.com/#{e["id"]}"%>
-    </br>
-    <p>Past Events</p>
-
-<% end %>
 
 <% end %>
 

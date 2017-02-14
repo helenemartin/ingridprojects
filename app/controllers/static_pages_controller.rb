@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   include HTTParty
+  GRAPH_BASE_URI = "https://graph.facebook.com/v2.8/me/events"
   # def start
   #   session[:oauth] = Koala::Facebook::OAuth.new('1853337078219954','6def2db69af01729c5fcb6078b7c2459', 'http://localhost:3000/callback/')
   #   binding.pry
@@ -27,12 +28,8 @@ class StaticPagesController < ApplicationController
   # end
 
   def events
-    @response = HTTParty.get("https://graph.facebook.com/v2.8/me/events?type=created&access_token=EAACEdEose0cBACPEPykYBg2jxZB9ctErpR3MlulvlMx6UApRreJB4NOl8TxNdsuoMAHjko7bmFi1805vhzKRNEcrIOhaLO4KKAcv7Umlf1yl1ag85QOLDIZBwTOZCrJotw3nA4jyYCxWmEGvzABB71q21fNspHKKiWnBgZCdMxT47e0iXlx2NfJd7RE4Ja4ZD")
-    @events = JSON.parse(@response.body)
-
-    @event_covers = HTTParty.get("https://graph.facebook.com/v2.8/me/events?fields=cover&type=created&access_token=EAACEdEose0cBAPYdm7xAyecp3W70ZAjUzCieNA8EgmS5kcB3NkOQ7yK4ZAJdCGCwhhAGcR1PIBGVoBvDdZBG4JrnZAMhIjkgsJCSNSACjbH5DAQGvUiBovRpgzPZBf4ZCpc9DRBZBLQiRZBFvZCUJz0qu6CkumVQZC6VxNqoozZBmsYicTh6ITOEPzf5dDYet1bxAQZD")
-    @events_covers = JSON.parse(@event_covers.body)['events']
-    
+    @response = HTTParty.get("#{GRAPH_BASE_URI}?type=created&fields=cover,name,date,place,description&access_token=EAACEdEose0cBABYPycpSHyLVfrIXSw3M8184Juuuw4EEx9wzDSuVBADGxLmiZClsITNLyaT8ZA3Kqsz85ZBUedAAaimkgdC23RHuhByKbZBZBUXlYFeZAJFJ5zpZClWlxfVlvu8xicgmU3DXlFKkTfma1iENLVptvMElMsw2EmZCM0P0ltS7afKZAQJwsUMAZAsCUZD")
+    @events = JSON.parse(@response.body)['data']  
   end
 
   def about
