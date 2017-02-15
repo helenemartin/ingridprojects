@@ -28,7 +28,7 @@ class StaticPagesController < ApplicationController
   # end
 
   def events
-    @response = HTTParty.get("#{GRAPH_BASE_URI}?type=created&fields=cover,name,date,place,description&access_token=EAACEdEose0cBABYPycpSHyLVfrIXSw3M8184Juuuw4EEx9wzDSuVBADGxLmiZClsITNLyaT8ZA3Kqsz85ZBUedAAaimkgdC23RHuhByKbZBZBUXlYFeZAJFJ5zpZClWlxfVlvu8xicgmU3DXlFKkTfma1iENLVptvMElMsw2EmZCM0P0ltS7afKZAQJwsUMAZAsCUZD")
+    @response = HTTParty.get("#{GRAPH_BASE_URI}?type=created&fields=cover,name,start_time,place,description&access_token=EAACEdEose0cBAJAAP2O7ZAPxjkhMZAFATEjR5weN7gzZBdo1YDU3J31AyzaHJNvsk1gRxubZCPORRIFGhS5zxw5sXZC6mdPsZASFdawhgeeUj2M9AFqSMWNDjH29F8s0kf9XaID30GxpeQ88I9e46PNcKye95ZAVqCamhw3YCn3CBEjSOaZABCzB4iIOeP914toZD")
     @events = JSON.parse(@response.body)['data']  
   end
 
