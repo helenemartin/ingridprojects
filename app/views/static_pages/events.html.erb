@@ -5,11 +5,14 @@
   
 
   <h1><%= event["name"]%></h1>
-  <h1><%= event["start_time"]%></h1>
+  <h1><%= Date.parse(event["start_time"]).strftime("%-d %B %Y")%></h1>
   <%= image_tag event["cover"]["source"]%>
-  <p><%= event["place"]%></p>
+  <p><%= event["place"]["name"]%>, <%= event["place"]["location"]["street"]%>, 
+    <%= event["place"]["location"]["city"]%>
+  </p>
+  
   <p><%= event["description"]%></p>
-
+  
 
 <% end %>
 
