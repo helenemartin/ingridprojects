@@ -7,7 +7,6 @@ Ingrid::Application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'images/:id' => 'images#show'
-  get 'events' => 'static_pages#events'
   get 'start' => 'static_pages#start'
   get 'callback' => 'static_pages#callback'
 
