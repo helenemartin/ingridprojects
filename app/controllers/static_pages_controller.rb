@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
-  include HTTParty
-  GRAPH_BASE_URI = "https://graph.facebook.com/v2.8/me/events"
+  
+  # include HTTParty
+  # GRAPH_BASE_URI = "https://graph.facebook.com/v2.8/me/events"
   # def start
   #   session[:oauth] = Koala::Facebook::OAuth.new('1853337078219954','6def2db69af01729c5fcb6078b7c2459', 'http://localhost:3000/callback/')
   #   binding.pry
@@ -28,8 +29,11 @@ class StaticPagesController < ApplicationController
   # end
 
   def events
-    @response = HTTParty.get("#{GRAPH_BASE_URI}?type=created&fields=cover,name,start_time,place,description&access_token=EAACEdEose0cBAANL9KjL9F2t5ZBZB6GcU1RIZB6gv50RdUiB5r6N4s9aI5B4KM1xsit25xDCOka4dI52mKWGIZAWVPzmVK6rPmdp9KyxStUu1B8AYvFS7XDHUPZCRisOq9yVl10NwS7vTVi1W7icExZAg3zzGpHjjaxa0FYnykqYJhrakt2M8XCD1GlPDxcHcZD")
-    @events = JSON.parse(@response.body)['data']  
+    # @response = HTTParty.get("#{GRAPH_BASE_URI}?type=created&fields=cover,name,start_time,place,description&access_token=EAACEdEose0cBAANL9KjL9F2t5ZBZB6GcU1RIZB6gv50RdUiB5r6N4s9aI5B4KM1xsit25xDCOka4dI52mKWGIZAWVPzmVK6rPmdp9KyxStUu1B8AYvFS7XDHUPZCRisOq9yVl10NwS7vTVi1W7icExZAg3zzGpHjjaxa0FYnykqYJhrakt2M8XCD1GlPDxcHcZD")
+    # @events = JSON.parse(@response.body)['data']
+    page = MetaInspector.new('https://facebook.com/ingridprojects/?fref=ts')
+    puts page.parsed
+     
   end
 
   def about
