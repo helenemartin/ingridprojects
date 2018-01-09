@@ -10,14 +10,14 @@
  *
 
  */
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway');
 
 @import 'bootstrap';
 
   
 h1 a {
   color:black;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Libre Baskerville', cursive;
   text-transform: capitalize;
   text-decoration: none;
 }
@@ -66,7 +66,7 @@ p span {
 .eventcontainer img {
   max-width:200px;
   max-height:200px;
-  object-fit: contain;
+  object-position:contain;
   position: absolute;
 }
 

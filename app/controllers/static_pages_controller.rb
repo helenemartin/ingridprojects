@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
   # end
 
   def events
-    @response = HTTParty.get("#{GRAPH_BASE_URI}?type=created&fields=cover,name,start_time,place,description&access_token=EAACEdEose0cBALXOQ2pZCmk0ZC9DWUXv1ZCcQW2tZBrlLcPPeLfZCkcoSWNj2F686nAIQ91Ch5bfHMzZCmvRlhWPztst2GIrMiKVuPK8dDAJZBgevH5teO8uCNzRS1biGUEOMwIRmY0iCKAAxyTrWjwRM6J6VM5FyyBZAYcZBmE83nnMwRP6fMCaS")
+    @response = HTTParty.get("#{GRAPH_BASE_URI}?type=created&fields=cover,name,start_time,place,description&access_token=EAACEdEose0cBACVzSduwH6wVkeDBTN0AHRyZAp0NniSHHN8nx2CZB8shNGaN1FInqjSPVjSrAZAhkbpnEYXS6WGIP82GgxTZAbxe5ppjFrwXSbI6MYxtOWZC7la0XDFlf1B53U8iOqlkhIvMAHpRyrRdhV1Lf6AVcnCj4uaf5A8J6ZB75ZAsSOL")
     @events = JSON.parse(@response.body)['data']
     # page = MetaInspector.new('https://facebook.com/ingridprojects/?fref=ts')
     # puts page.parsed

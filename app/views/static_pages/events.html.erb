@@ -9,7 +9,7 @@
     <!--</div>-->
     <div class="detail">
       <!--<h1><%= event["page"]%></h1>-->
-      <h1><%= Date.parse(event["start_time"]).strftime("%-d %B %Y")%></h1>
+      <h2><%= Date.parse(event["start_time"]).strftime("%-d %B %Y")%></h2>
       <p>
         <%= event["place"]["name"]%>, <span>starts at: <%= event["start_time"]%></span> 
       </p>
