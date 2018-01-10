@@ -1,0 +1,22 @@
+
+
+
+<% @events.each do |event| %>
+  
+<div class="eventcontainer">
+    <!--<div class="eventcontainer-img">-->
+      <%= image_tag event["cover"]["source"]%>
+    <!--</div>-->
+    <div class="detail">
+      <!--<h1><%= event["page"]%></h1>-->
+      <h2><%= Date.parse(event["start_time"]).strftime("%-d %B %Y")%></h2>
+      <p>
+        <%= event["place"]["name"]%>, <span>starts at: <%= event["start_time"]%></span> 
+      </p>
+      <p><%= event["description"]%></p>
+    </div>
+</div>
+
+<% end %>
+
+
