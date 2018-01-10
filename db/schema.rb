@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110200751) do
+ActiveRecord::Schema.define(version: 20180110201425) do
+
+  create_table "image_captions", force: true do |t|
+    t.integer  "image_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "image_captions", ["image_id"], name: "index_image_captions_on_image_id"
 
   create_table "images", force: true do |t|
     t.string   "filename"
