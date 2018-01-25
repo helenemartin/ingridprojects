@@ -4,12 +4,16 @@
 img {
   // width: 25%;
   padding: 10px 20px 2px 2px;
-  float: left;
+  float: right;
   border-radius: 4px;
 }
 
-.show img {
-  // width: 40%;
+.show p  {
+  width: 40%;
   float: right;
   
+}
+
+.show p {
+  font-size: 20px;
 }

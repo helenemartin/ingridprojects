@@ -33,6 +33,7 @@ gem 'better_errors'
 gem 'httparty'
 gem 'fql'
 gem 'metainspector'
+gem 'pry'
 
 group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
@@ -62,4 +63,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'binding_of_caller'
+
 
