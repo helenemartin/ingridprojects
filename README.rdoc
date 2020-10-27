@@ -1,3 +1,8 @@
+Website template on Rails for Ingrid Projects, an Artist run initiative in Deptford, 2017
+
+
+http://ingridprojects.herokuapp.com/
+
 == README
 
 This README would normally document whatever steps are necessary to get the
