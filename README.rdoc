@@ -1,4 +1,8 @@
+Ode to the two most famous Ingrid!
+Ingrid Bergman and Ingrid Tulli
+
 Website template on Rails for Ingrid Projects, an Artist run initiative in Deptford, 2017
+Index page images shuffle on browser refresh
 
 
 http://ingridprojects.herokuapp.com/
